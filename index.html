@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress Tracker</title>
+    <script src="db.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <button class="show" onclick="show()">Add an entry</button>
+      <div class="popup">
+        <div id="menu-elements">
+          <select name="subject" id="subject">
+            <option id="math" value="math">Математика</option>
+            <option id="compsci" value="compsci">Информатика</option>
+            <option id="russian" value="russian">Русский</option>
+          </select>
+          <input type="text" placeholder="Кол-во баллов" id="pts_input" />
+          <button onclick="submit()">Submit</button>
+        </div>
+      </div>
+      <div id="chart">
+        <canvas height="400" width="1000" id="chart-canvas"></canvas>
+      </div>
+    </div>
+  </body>
+  <script src="charting.js"></script>
+</html>
